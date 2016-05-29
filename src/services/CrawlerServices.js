@@ -7,15 +7,17 @@ var cheerio=require('cheerio');
 var BufferHelper =require('bufferhelper');
 class CrawlerServices
 {
-       constructor()
-    {
-        this.html='';
+       constructor(city)
+    {   
+        this.Tag=city.CityTag||"",
+        this.CityName=city.CityName||"",
+        this.URL=city.CityURL||""
     }
     gethtml()
     {
         var promise = new Promise(function(resolve, reject) {
             // ... some code
-            http.get('http://pm25.in/rank', (res) => {
+            http.get(this.URL, (res) => {
 
                 var bufferHelper = new BufferHelper();
                 res.on('data', (d) => {
@@ -50,7 +52,7 @@ class CrawlerServices
             // cheerio.load(html,{decodeEntities: false}); 加个参数
             var $ =cheerio.load(data,{decodeEntities: false});
             var results=[];
-            $(tag).children().each(function(i, elem) {
+            $(this.Tag).children().each(function(i, elem) {
                 var arr=[];
                 $(this).children().each(function(j, el) {
 
