@@ -15,3 +15,4 @@ let URLConfig = {
         }
     ]
 }
+export {URLConfig as URLConfig}
