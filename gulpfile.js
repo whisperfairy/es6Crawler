@@ -10,7 +10,17 @@ const babel = require('gulp-babel');
 const glob=require('glob');
 var helper =require('./config/gulp-helper');
 
-gulp.task('default', ['es6']);
+gulp.task('default', ['es6'],function() {
+    "use strict";
+    glob("src/**/*.js", {}, function (er, files) {
+        files.map((item) => {
+            var result = helper.filepath(item);
+            console.log(result.folder);
+            return gulp.src(item.toString())
+                .pipe(babel()).pipe(gulp.dest('./build/' + result.folder));
+        })
+    });
+});
 gulp.task('es6',[],function()
 {
     glob("src/**/*.js", {}, function (er, files) {
@@ -19,7 +29,8 @@ gulp.task('es6',[],function()
         // was found, then files is ["**/*.js"]
         // er is an error object or null.
         files.map((item) => {
-            var watcher = gulp.watch(item.toString(),function(event) {
+            var watcher = gulp.watch(item.toString(),
+                function(event) {
                 var result=helper.filepath(item);
                 console.log(result.folder);
                 return gulp.src(item.toString())

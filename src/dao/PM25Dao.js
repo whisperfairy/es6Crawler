@@ -7,4 +7,4 @@ var DaoBase = require('./DaoBase'),
 
 var PMDao = new DaoBase(Blog);
 
-module.exports = PMDao;
+module.exports = PMDao; 

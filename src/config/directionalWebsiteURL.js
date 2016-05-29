@@ -9,9 +9,9 @@ let URLConfig = {
             CityTag: 'tbody'
         },
         {
-            CityName: '',
-            CityURL: '',
-            CityTag: ''
+            CityName: 'shanghai',
+            CityURL: 'http://pm25.in/shanghai',
+            CityTag: 'tbody'
         }
     ]
 }

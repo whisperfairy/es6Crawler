@@ -15,7 +15,7 @@ DaoBase.prototype.getMongoEntity=function(entity)
 {
     var MDBEntities = new this.model(entity);
     return MDBEntities; //Krouky
-};
+}; 
 DaoBase.prototype.saveEntity=function(entity,callback)
 {   console.log(entity);
     this.save(this.getMongoEntity(entity),callback);

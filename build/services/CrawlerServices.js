@@ -1,8 +1,19 @@
 'use strict';
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.CrawlerServices = undefined;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * Created by whisp_000 on 2016/5/28.
@@ -13,64 +24,55 @@ var cheerio = require('cheerio');
 var BufferHelper = require('bufferhelper');
 
 var CrawlerServices = function () {
-    function CrawlerServices() {
-        _classCallCheck(this, CrawlerServices);
+    function CrawlerServices(city) {
+        (0, _classCallCheck3.default)(this, CrawlerServices);
 
-        this.html = '';
+        this.Tag = city.CityTag || "", this.CityName = city.CityName || "", this.URL = city.CityURL || "";
     }
 
-    _createClass(CrawlerServices, [{
+    (0, _createClass3.default)(CrawlerServices, [{
         key: 'gethtml',
         value: function gethtml() {
-            var promise = new Promise(function (resolve, reject) {
-                // ... some code
-                http.get('http://pm25.in/rank', function (res) {
 
-                    var bufferHelper = new BufferHelper();
-                    res.on('data', function (d) {
-                        bufferHelper.concat(d);
-                    });
-                    res.on('end', function () {
-                        this.html = iconv.decode(bufferHelper.toBuffer(), 'utf8');
-                        resolve(value);
-                    });
-                }).on('error', function (e) {
-                    console.error(e);
-                    reject(error);
+            http.get(this.URL, function (res) {
+
+                var bufferHelper = new BufferHelper();
+                res.on('data', function (d) {
+                    bufferHelper.concat(d);
                 });
-                return promise;
+                res.on('end', function () {
+                    this.html = iconv.decode(bufferHelper.toBuffer(), 'utf8');
+                    resolve(value);
+                });
+            }).on('error', function (e) {
+                console.error(e);
             });
         }
     }, {
         key: 'catchdata',
         value: function catchdata(htmldata, tag, callback) {
-            var promise = new Promise(function (resolve, reject) {
-                // ... some code
-                var data = htmldata;
-                if (data == null) {
-                    data = this.html;
-                }
-                //console.log(data);
-                //cheerio
-                //cheerio本身默认是转实体的
-                // cheerio.load(html,{decodeEntities: false}); 加个参数
-                var $ = cheerio.load(data, { decodeEntities: false });
-                var results = [];
-                $(tag).children().each(function (i, elem) {
-                    var arr = [];
-                    $(this).children().each(function (j, el) {
+            var data = htmldata;
+            if (data == null) {
+                data = this.html;
+            }
+            //console.log(data);
+            //cheerio
+            //cheerio本身默认是转实体的
+            // cheerio.load(html,{decodeEntities: false}); 加个参数
+            var $ = cheerio.load(data, { decodeEntities: false });
+            var results = [];
+            $(this.Tag).children().each(function (i, elem) {
+                var arr = [];
+                $(this).children().each(function (j, el) {
 
-                        arr.push($(el).text());
-                    });
-                    results.push(arr);
+                    arr.push($(el).text());
                 });
-                resolve(results);
+                results.push(arr);
             });
-            return promise;
+            return results;
         }
     }]);
-
     return CrawlerServices;
 }();
 
-module.exports = CrawlerServices;
+exports.CrawlerServices = CrawlerServices;

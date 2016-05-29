@@ -1,6 +1,6 @@
 "use strict";
 let CrawlerClass = require ('../services/CrawlerServices');
-let dap = require('../dao/PM25Dao');
+let dao = require('../dao/PM25Dao');
 import {URLConfig} from '../config/directionalWebsiteURL';
 
  URLConfig.CityURL.forEach((element, index, array)=>{
@@ -9,7 +9,9 @@ import {URLConfig} from '../config/directionalWebsiteURL';
          let crawler=new CrawlerClass(cityinfo);
          var f1 = await crawler.gethtml();
          var f2 = await crawler.catchdata();
-         return f2
+         return f2;
      };
-     asyncPM(element).then
- })
+     asyncPM(element).then(function (result) {
+         console.log(result);
+     });
+ });

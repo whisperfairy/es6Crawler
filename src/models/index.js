@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var config = require('../config');
+var config = require('../config/dbconfig');
 var fs = require('fs');
 var log = require('./../libs/log');
 
