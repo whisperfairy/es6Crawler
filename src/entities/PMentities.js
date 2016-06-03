@@ -2,7 +2,7 @@
  * Created by Administrator on 2016/2/6.
  */
 var PMEntities = function(pmarr){
-
+    
     this.rank=pmarr[0];
     this.city=pmarr[1];
     this.aqi=pmarr[2];
@@ -16,4 +16,4 @@ var PMEntities = function(pmarr){
     this.o3_8h=pmarr[10];
     this.so2=pmarr[11];
 };
-module.exports=PMEntities;
+export {PMEntities};

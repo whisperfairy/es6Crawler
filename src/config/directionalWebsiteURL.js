@@ -7,6 +7,7 @@ let URLConfig = {
             CityName: 'beijing',
             CityURL: 'http://pm25.in/beijing',
             CityTag: 'tbody'
+           
         },
         {
             CityName: 'shanghai',

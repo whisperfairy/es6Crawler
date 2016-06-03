@@ -9,7 +9,7 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 const glob=require('glob');
 var helper =require('./config/gulp-helper');
-
+console.log(__dirname);
 gulp.task('default', ['es6'],function() {
     "use strict";
     glob("src/**/*.js", {}, function (er, files) {

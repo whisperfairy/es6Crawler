@@ -3,8 +3,8 @@
  */
 var DaoBase = require('./DaoBase'),
     models = require('./../models'),
-    Blog = models.dailypm;
+    citypm = models.citypm;
 
-var PMDao = new DaoBase(Blog);
+var PMDao = new DaoBase(citypm);
 
 module.exports = PMDao; 

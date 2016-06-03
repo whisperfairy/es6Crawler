@@ -1,13 +1,15 @@
 /**
- * Created by Administrator on 2016/1/21.
+ * Created by whisp_000 on 2016/6/3.
  */
+
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var schema = new Schema({
-    rank:{type:String},
+
+    stationname:{type:String},
     city:{type:String},
-    aqi:{type:String},
+    AQI:{type:String},
     ranktype:{type:String},
     primarypollution:{type:String},
     pm25:{type:String},
@@ -18,6 +20,5 @@ var schema = new Schema({
     o3_8h:{type:String},
     so2:{type:String},
     create_at:{ type:Date, default:Date.now }
-
 });
-mongoose.model('dailypm', schema);
+mongoose.model('citypm', schema);
