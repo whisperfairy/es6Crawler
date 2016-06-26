@@ -5,11 +5,14 @@ import {URLConfig} from '../config/directionalWebsiteURL';
 
 import {StackEvent} from '../Event/StackEvent';
 let iter = URLConfig.CityURL[Symbol.iterator]();
+let i=0;
 StackEvent.on('popstack', function () {
     let cityinfo = iter.next();
     if (cityinfo.done!= true) {
         let crawler = new CrawlerClass(cityinfo.value)
         crawler.start();
+        i++;
+        console.log("i="+i);
     }
     else {
         console.log('finish');

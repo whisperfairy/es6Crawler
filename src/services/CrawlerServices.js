@@ -20,9 +20,9 @@ class CrawlerServices {
 
     gethtml() {
         let _ = this;
-        var promise = new Promise((resolve, reject)=> {
+        let promise = new Promise((resolve, reject)=> {
             // ... some code
-            http.get(this.URL, (res) => {
+        let req=http.get(this.URL, (res) => {
                 var bufferHelper = new BufferHelper();
                 res.on('data', (d) => {
                     bufferHelper.concat(d);
@@ -37,6 +37,7 @@ class CrawlerServices {
                 reject(e);
 
             });
+            req.end();
         });
         return promise;
     }
@@ -97,17 +98,12 @@ class CrawlerServices {
          const _ = this;
          let asyncPM = async function asyncPM ()
          {
-             try
-             {
+
              await _.gethtml();
              await _.catchdata();
              await _.dealData();
              await StackEvent.emit('popstack');
-             }catch (e)
-             {
-                 console.log(e+"errer");
-                 StackEvent.emit('popstack');
-             }
+
                  return true;
          };
           asyncPM();

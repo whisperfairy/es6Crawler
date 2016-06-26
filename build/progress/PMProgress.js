@@ -9,16 +9,19 @@ var _StackEvent = require('../Event/StackEvent');
 // let dao = require('../dao/PM25Dao');
 
 var iter = _directionalWebsiteURL.URLConfig.CityURL[Symbol.iterator]();
+var i = 0;
 _StackEvent.StackEvent.on('popstack', function () {
     var cityinfo = iter.next();
     if (cityinfo.done != true) {
         var crawler = new _CrawlerServices.CrawlerServices(cityinfo.value);
         crawler.start();
+        i++;
+        console.log("i=" + i);
     } else {
         console.log('finish');
     }
 });
-for (var i = 0; i < 1; i++) {
+for (var _i = 0; _i < 1; _i++) {
     var cityinfo = iter.next();
     if (cityinfo.done == true) {
         break;

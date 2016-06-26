@@ -53,7 +53,7 @@ var CrawlerServices = function () {
             var _ = this;
             var promise = new Promise(function (resolve, reject) {
                 // ... some code
-                http.get(_this.URL, function (res) {
+                var req = http.get(_this.URL, function (res) {
                     var bufferHelper = new BufferHelper();
                     res.on('data', function (d) {
                         bufferHelper.concat(d);
@@ -67,6 +67,7 @@ var CrawlerServices = function () {
                     console.error(e);
                     reject(e);
                 });
+                req.end();
             });
             return promise;
         }
@@ -171,42 +172,30 @@ var CrawlerServices = function () {
                         while (1) {
                             switch (_context2.prev = _context2.next) {
                                 case 0:
-                                    _context2.prev = 0;
-                                    _context2.next = 3;
+                                    _context2.next = 2;
                                     return _.gethtml();
 
-                                case 3:
-                                    _context2.next = 5;
+                                case 2:
+                                    _context2.next = 4;
                                     return _.catchdata();
 
-                                case 5:
-                                    _context2.next = 7;
+                                case 4:
+                                    _context2.next = 6;
                                     return _.dealData();
 
-                                case 7:
-                                    _context2.next = 9;
+                                case 6:
+                                    _context2.next = 8;
                                     return _StackEvent.StackEvent.emit('popstack');
 
-                                case 9:
-                                    _context2.next = 15;
-                                    break;
-
-                                case 11:
-                                    _context2.prev = 11;
-                                    _context2.t0 = _context2['catch'](0);
-
-                                    console.log(_context2.t0 + "errer");
-                                    _StackEvent.StackEvent.emit('popstack');
-
-                                case 15:
+                                case 8:
                                     return _context2.abrupt('return', true);
 
-                                case 16:
+                                case 9:
                                 case 'end':
                                     return _context2.stop();
                             }
                         }
-                    }, _callee2, this, [[0, 11]]);
+                    }, _callee2, this);
                 }));
 
                 function asyncPM() {
