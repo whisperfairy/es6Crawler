@@ -21,6 +21,8 @@ var _createClass2 = require('babel-runtime/helpers/createClass');
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
+var _StackEvent = require('../Event/StackEvent');
+
 var _PMStationInfo = require('../entities/PMStationInfo');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -33,6 +35,8 @@ var iconv = require('iconv-lite');
 var cheerio = require('cheerio');
 var BufferHelper = require('bufferhelper');
 var pmdao = require('../dao/PM25Dao');
+
+console.log(undefined);
 
 var CrawlerServices = function () {
     function CrawlerServices(city) {
@@ -77,7 +81,7 @@ var CrawlerServices = function () {
                 //console.log(data);
                 //cheerio
                 //cheerio本身默认是转实体的
-                // cheerio.load(html,{decodeEntities: false}); 加个参数
+                //cheerio.load(html,{decodeEntities: false}); 加个参数
                 var $ = cheerio.load(data, { decodeEntities: false });
                 var results = [];
                 $(_this2.Tag).children().each(function (i, elem) {
@@ -155,6 +159,46 @@ var CrawlerServices = function () {
                 // })
             });
             return promise;
+        }
+    }, {
+        key: 'start',
+        value: function start() {
+            var _ = this;
+            var asyncPM = function () {
+                var ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee2() {
+                    return _regenerator2.default.wrap(function _callee2$(_context2) {
+                        while (1) {
+                            switch (_context2.prev = _context2.next) {
+                                case 0:
+                                    _context2.next = 2;
+                                    return _.gethtml();
+
+                                case 2:
+                                    _context2.next = 4;
+                                    return _.catchdata();
+
+                                case 4:
+                                    _context2.next = 6;
+                                    return _.dealData();
+
+                                case 6:
+                                    return _context2.abrupt('return', true);
+
+                                case 7:
+                                case 'end':
+                                    return _context2.stop();
+                            }
+                        }
+                    }, _callee2, this);
+                }));
+
+                function asyncPM() {
+                    return ref.apply(this, arguments);
+                }
+
+                return asyncPM;
+            }();
+            asyncPM();
         }
     }]);
     return CrawlerServices;

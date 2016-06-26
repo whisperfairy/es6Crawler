@@ -87,8 +87,6 @@ DaoBase.prototype.delete = function (query, callback) {
         return callback(null);
     });
 };
-
-
 DaoBase.prototype.update = function (conditions, update, options, callback) {
     this.model.update(conditions, update, options, function (error) {
         if (error) return callback(error);

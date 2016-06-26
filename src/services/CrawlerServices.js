@@ -6,8 +6,9 @@ const iconv = require('iconv-lite');
 const cheerio = require('cheerio');
 const BufferHelper = require('bufferhelper');
 const pmdao = require('../dao/PM25Dao');
-import {PMStationInfo} from '../entities/PMStationInfo'
-
+import {StackEvent} from '../Event/StackEvent';
+import {PMStationInfo} from '../entities/PMStationInfo';
+console.log(this);
 class CrawlerServices {
     constructor(city) {
         this.Tag = city.CityTag || "",
@@ -46,7 +47,7 @@ class CrawlerServices {
             //console.log(data);
             //cheerio
             //cheerio本身默认是转实体的
-            // cheerio.load(html,{decodeEntities: false}); 加个参数
+            //cheerio.load(html,{decodeEntities: false}); 加个参数
             var $ = cheerio.load(data, {decodeEntities: false});
             var results = [];
             $(this.Tag).children().each(function (i, elem) {
@@ -62,7 +63,6 @@ class CrawlerServices {
         });
         return promise;
     }
-
     dealData() {
         let _ = this;
         var promise = new Promise((resolve, reject)=> {
@@ -87,9 +87,20 @@ class CrawlerServices {
             //         console.log('db success');
             //     });
             // })
-
         });
         return promise;
     }
+       start()
+      {
+         const _ = this;
+         let asyncPM = async function asyncPM ()
+         {
+             await _.gethtml();
+             await _.catchdata();
+             await _.dealData();
+             return true;
+         };
+          asyncPM();
+      }
 }
 export {CrawlerServices}
