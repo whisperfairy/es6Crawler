@@ -3,5 +3,5 @@
  */
 "use strict";
 const events=require ('events');
-let stackevents = new events.EventEmitter();
-export {stackevents};
+let StackEvent = new events.EventEmitter();
+export {StackEvent};

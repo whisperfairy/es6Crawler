@@ -4,23 +4,25 @@ import {CrawlerServices as CrawlerClass} from '../services/CrawlerServices'
 import {URLConfig} from '../config/directionalWebsiteURL';
 
 import {StackEvent} from '../Event/StackEvent';
-
+let iter = URLConfig.CityURL[Symbol.iterator]();
 StackEvent.on('popstack', function () {
     let cityinfo = iter.next();
-    if (cityinfo.done  = true) {
+    if (cityinfo.done!= true) {
         let crawler = new CrawlerClass(cityinfo.value)
         crawler.start();
     }
+    else {
+        console.log('finish');
+    }
 });
-let iter = URLConfig.CityURL[Symbol.iterator]();
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 1; i++) {
     let cityinfo = iter.next();
     if (cityinfo.done == true) {
         break;
     }
     let crawler = new CrawlerClass(cityinfo.value)
     crawler.start();
-}
+};
 // URLConfig.CityURL.forEach((element, index, array)=>{
 //     let asyncPM = async function (cityinfo){
 //         let crawler=new CrawlerClass(cityinfo);

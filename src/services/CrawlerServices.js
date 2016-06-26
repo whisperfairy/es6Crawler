@@ -35,6 +35,7 @@ class CrawlerServices {
             }).on('error', (e) => {
                 console.error(e);
                 reject(e);
+
             });
         });
         return promise;
@@ -52,6 +53,7 @@ class CrawlerServices {
             var results = [];
             $(this.Tag).children().each(function (i, elem) {
                 var arr = [];
+
                 $(elem).children().each(function (j, el) {
                     arr.push($(el).text());
                 });
@@ -95,10 +97,18 @@ class CrawlerServices {
          const _ = this;
          let asyncPM = async function asyncPM ()
          {
+             try
+             {
              await _.gethtml();
              await _.catchdata();
              await _.dealData();
-             return true;
+             await StackEvent.emit('popstack');
+             }catch (e)
+             {
+                 console.log(e+"errer");
+                 StackEvent.emit('popstack');
+             }
+                 return true;
          };
           asyncPM();
       }

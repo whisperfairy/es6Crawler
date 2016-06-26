@@ -86,6 +86,7 @@ var CrawlerServices = function () {
                 var results = [];
                 $(_this2.Tag).children().each(function (i, elem) {
                     var arr = [];
+
                     $(elem).children().each(function (j, el) {
                         arr.push($(el).text());
                     });
@@ -170,26 +171,42 @@ var CrawlerServices = function () {
                         while (1) {
                             switch (_context2.prev = _context2.next) {
                                 case 0:
-                                    _context2.next = 2;
+                                    _context2.prev = 0;
+                                    _context2.next = 3;
                                     return _.gethtml();
 
-                                case 2:
-                                    _context2.next = 4;
+                                case 3:
+                                    _context2.next = 5;
                                     return _.catchdata();
 
-                                case 4:
-                                    _context2.next = 6;
+                                case 5:
+                                    _context2.next = 7;
                                     return _.dealData();
 
-                                case 6:
+                                case 7:
+                                    _context2.next = 9;
+                                    return _StackEvent.StackEvent.emit('popstack');
+
+                                case 9:
+                                    _context2.next = 15;
+                                    break;
+
+                                case 11:
+                                    _context2.prev = 11;
+                                    _context2.t0 = _context2['catch'](0);
+
+                                    console.log(_context2.t0 + "errer");
+                                    _StackEvent.StackEvent.emit('popstack');
+
+                                case 15:
                                     return _context2.abrupt('return', true);
 
-                                case 7:
+                                case 16:
                                 case 'end':
                                     return _context2.stop();
                             }
                         }
-                    }, _callee2, this);
+                    }, _callee2, this, [[0, 11]]);
                 }));
 
                 function asyncPM() {
