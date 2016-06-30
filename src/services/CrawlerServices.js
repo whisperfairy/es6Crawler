@@ -20,31 +20,48 @@ class CrawlerServices {
 
     gethtml() {
         let _ = this;
+        console.log("html start");
         let promise = new Promise((resolve, reject)=> {
             // ... some code
+            let  request_timer = null;
+// 请求5秒超时
+
         let req=http.get(this.URL, (res) => {
-                var bufferHelper = new BufferHelper();
+             clearTimeout(request_timer);
+                let bufferHelper = new BufferHelper();
+              let response_timer = setTimeout(function() {
+                res.destroy();
+                reject("Response Timeout.");
+                console.log('Response Timeout.');
+              }, 60000);
                 res.on('data', (d) => {
                     bufferHelper.concat(d);
                 });
                 res.on('end', function () {
                     _.html = iconv.decode(bufferHelper.toBuffer(), 'utf8');
+                    clearTimeout(response_timer);
                     console.log(_.CityName + "gethtml success");
                     resolve(_.html);
                 });
             }).on('error', (e) => {
-                console.error(e);
-                reject(e);
 
+                reject(e);
             });
+            request_timer = setTimeout(function() {
+                req.abort();
+                reject("Request Timeout.");
+                console.log('Request Timeout.');
+            }, 10000);
             req.end();
         });
+
         return promise;
     }
 
     catchdata() {
         var promise = new Promise((resolve, reject)=> {
             // ... some code
+            console.log("catch start");
             let data = this.html;
             //console.log(data);
             //cheerio
@@ -54,7 +71,10 @@ class CrawlerServices {
             var results = [];
             $(this.Tag).children().each(function (i, elem) {
                 var arr = [];
-
+                if($(elem).children().length<6)
+                {
+                    reject();
+                }
                 $(elem).children().each(function (j, el) {
                     arr.push($(el).text());
                 });
@@ -98,15 +118,27 @@ class CrawlerServices {
          const _ = this;
          let asyncPM = async function asyncPM ()
          {
-
+             try {
              await _.gethtml();
              await _.catchdata();
              await _.dealData();
-             await StackEvent.emit('popstack');
-
                  return true;
+             }
+             catch (e)
+             {
+
+                 throw new Error('出错了');
+             }
+
          };
-          asyncPM();
+          asyncPM().then(
+              ()=>{
+             StackEvent.emit('popstack');
+          }).catch(
+              (e) =>
+        {    StackEvent.emit('retry');
+             console.log(e);
+         });
       }
 }
 export {CrawlerServices}

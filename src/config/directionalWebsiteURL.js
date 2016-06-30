@@ -1752,7 +1752,7 @@ let URLConfig = {
         },
         {
             CityName: 'xingtai',
-            CityURL: 'http://pm25.in/',
+            CityURL: 'http://pm25.in/xingtai',
             CityTag: 'tbody',
             StationInfo:[
                 {
@@ -1833,7 +1833,7 @@ let URLConfig = {
         },
         {
             CityName: 'xinyang',
-            CityURL: 'http://pm25.in/xining',
+            CityURL: 'http://pm25.in/xinyang',
             CityTag: 'tbody',
             StationInfo:[
                 {
@@ -5194,7 +5194,7 @@ let URLConfig = {
         },
         {
             CityName: 'baishan',
-            CityURL: 'http://pm25.in/',
+            CityURL: 'http://pm25.in/baishan',
             CityTag: 'tbody',
             StationInfo:[
                 {
@@ -5211,7 +5211,7 @@ let URLConfig = {
         },
         {
             CityName: 'baiyin',
-            CityURL: 'http://pm25.in/',
+            CityURL: 'http://pm25.in/baiyin',
             CityTag: 'tbody',
             StationInfo:[
                 {

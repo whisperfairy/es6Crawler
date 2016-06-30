@@ -51,24 +51,41 @@ var CrawlerServices = function () {
             var _this = this;
 
             var _ = this;
+            console.log("html start");
             var promise = new Promise(function (resolve, reject) {
                 // ... some code
+                var request_timer = null;
+                // 请求5秒超时
+
                 var req = http.get(_this.URL, function (res) {
+                    clearTimeout(request_timer);
                     var bufferHelper = new BufferHelper();
+                    var response_timer = setTimeout(function () {
+                        res.destroy();
+                        reject("Response Timeout.");
+                        console.log('Response Timeout.');
+                    }, 60000);
                     res.on('data', function (d) {
                         bufferHelper.concat(d);
                     });
                     res.on('end', function () {
                         _.html = iconv.decode(bufferHelper.toBuffer(), 'utf8');
+                        clearTimeout(response_timer);
                         console.log(_.CityName + "gethtml success");
                         resolve(_.html);
                     });
                 }).on('error', function (e) {
-                    console.error(e);
+
                     reject(e);
                 });
+                request_timer = setTimeout(function () {
+                    req.abort();
+                    reject("Request Timeout.");
+                    console.log('Request Timeout.');
+                }, 10000);
                 req.end();
             });
+
             return promise;
         }
     }, {
@@ -78,6 +95,7 @@ var CrawlerServices = function () {
 
             var promise = new Promise(function (resolve, reject) {
                 // ... some code
+                console.log("catch start");
                 var data = _this2.html;
                 //console.log(data);
                 //cheerio
@@ -87,7 +105,9 @@ var CrawlerServices = function () {
                 var results = [];
                 $(_this2.Tag).children().each(function (i, elem) {
                     var arr = [];
-
+                    if ($(elem).children().length < 6) {
+                        reject();
+                    }
                     $(elem).children().each(function (j, el) {
                         arr.push($(el).text());
                     });
@@ -172,30 +192,32 @@ var CrawlerServices = function () {
                         while (1) {
                             switch (_context2.prev = _context2.next) {
                                 case 0:
-                                    _context2.next = 2;
+                                    _context2.prev = 0;
+                                    _context2.next = 3;
                                     return _.gethtml();
 
-                                case 2:
-                                    _context2.next = 4;
+                                case 3:
+                                    _context2.next = 5;
                                     return _.catchdata();
 
-                                case 4:
-                                    _context2.next = 6;
+                                case 5:
+                                    _context2.next = 7;
                                     return _.dealData();
 
-                                case 6:
-                                    _context2.next = 8;
-                                    return _StackEvent.StackEvent.emit('popstack');
-
-                                case 8:
+                                case 7:
                                     return _context2.abrupt('return', true);
 
-                                case 9:
+                                case 10:
+                                    _context2.prev = 10;
+                                    _context2.t0 = _context2['catch'](0);
+                                    throw new Error('出错了');
+
+                                case 13:
                                 case 'end':
                                     return _context2.stop();
                             }
                         }
-                    }, _callee2, this);
+                    }, _callee2, this, [[0, 10]]);
                 }));
 
                 function asyncPM() {
@@ -204,7 +226,12 @@ var CrawlerServices = function () {
 
                 return asyncPM;
             }();
-            asyncPM();
+            asyncPM().then(function () {
+                _StackEvent.StackEvent.emit('popstack');
+            }).catch(function (e) {
+                _StackEvent.StackEvent.emit('retry');
+                console.log(e);
+            });
         }
     }]);
     return CrawlerServices;

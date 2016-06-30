@@ -21,7 +21,7 @@ export function readXlsx(callback){
 });
 };
 export function writeXlsxweather(callback)
-{   pump = new Pump();
+{   let pump = new Pump();
     var date= new Date();
     var now = new Date(date.getFullYear(),date.getMonth(),date.getDate());
     pump
@@ -45,26 +45,57 @@ callback();
 
 export function writeXlsxPM(callback)
 {
-    var date= new Date();
+    let promise = new Promise((resolve,reject)=>
+    {
+        let date= new Date();
 
-    pump = new Pump();
-    var now = new Date(date.getFullYear(),date.getMonth(),date.getDate());
-    pump
-        .mixin(MongodbMixin('mongodb://bjfu:hu0923010227@120.25.223.69/bjfuweather'))
-        .useCollection('dailycitypms')
-        .from(pump.find({create_at: {$gte: now}}))
-        .mixin(ExcelWriterMixin())
-        .createWorkbook('./resources/tmp/temppm'+now.getFullYear()+(now.getMonth()+1)+now.getDate()+'.xlsx')
-        .createWorksheet('AQI')
-        .writeHeaders(['rank', 'city','aqi','ranktype','primarypollution','pm25','pm10','co','no2','o3','o3_8h','so2','time'])
+         let pump = new Pump();
+        let now = new Date(date.getFullYear(),date.getMonth(),date.getDate());
+        pump
+            .mixin(MongodbMixin('mongodb://bjfu:hu0923010227@120.25.223.69/bjfuweather'))
+            .useCollection('dailycitypms')
+            .from(pump.find({create_at: {$gte: now}}))
+            .mixin(ExcelWriterMixin())
+            .createWorkbook('./resources/tmp/temppm'+now.getFullYear()+(now.getMonth()+1)+now.getDate()+'.xlsx')
+            .createWorksheet('AQI')
+            .writeHeaders(['rank', 'city','aqi','ranktype','primarypollution','pm25','pm10','co','no2','o3','o3_8h','so2','time'])
 
-        .process(function(AQI) {
-            return pump.writeRow([ AQI.rank, AQI.city,AQI.aqi,AQI.ranktype,AQI.primarypollution,AQI.pm25,AQI.pm10,AQI.co,AQI.no2,AQI.o3,AQI.o3_8h,AQI.so2,AQI.create_at.toString()]);
-        })
-        .logErrorsToConsole()
-        .run()
-        .then(function() {
-            console.log("Done writing contacts to file");
-            callback();
-        });
+            .process(function(AQI) {
+                return pump.writeRow([ AQI.rank, AQI.city,AQI.aqi,AQI.ranktype,AQI.primarypollution,AQI.pm25,AQI.pm10,AQI.co,AQI.no2,AQI.o3,AQI.o3_8h,AQI.so2,AQI.create_at.toString()]);
+            })
+            .logErrorsToConsole()
+            .run()
+            .then(function() {
+                console.log("Done writing contacts to file");
+                callback();
+            });
+    });
+
 };
+export function writeXlsxCityPM()
+{
+    let promise = new Promise((resolve,reject)=>{
+        let date= new Date();
+        let pump = new Pump();
+        let now = new Date(date.getFullYear(),date.getMonth(),date.getDate());
+        pump
+            .mixin(MongodbMixin('mongodb://bjfu:hu0923010227@120.25.223.69/bjfuweather'))
+            .useCollection('citypms')
+            .from(pump.find({create_at: {$gte: now}}))
+            .mixin(ExcelWriterMixin())
+            .createWorkbook('../resources/tmp/tempcitypm'+now.getFullYear()+(now.getMonth()+1)+now.getDate()+'.xlsx')
+            .createWorksheet('AQI')
+            .writeHeaders(['stationname', 'city','aqi','ranktype','primarypollution','pm25','pm10','co','no2','o3','o3_8h','so2','time'])
+
+            .process(function(AQI) {
+                return pump.writeRow([ AQI.stationname, AQI.city,AQI.AQI,AQI.ranktype,AQI.primarypollution,AQI.pm25,AQI.pm10,AQI.co,AQI.no2,AQI.o3,AQI.o3_8h,AQI.so2,AQI.create_at.toString()]);
+            })
+            .logErrorsToConsole()
+            .run()
+            .then(function() {
+                console.log("Done writing contacts to file");
+                resolve('done');
+            });
+    });
+   return promise;
+}

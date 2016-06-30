@@ -19,10 +19,14 @@ DaoBase.prototype.saveEntity = function (entity, callback) {
     let _ = this;
     let promise = new Promise((resolve, reject)=> {
         _.save(_.getMongoEntity(entity), function (err, data) {
-            if (err)
+            if (err) {
+                console.log(err);
                 reject(err);
+            }
             else
+            {
                 resolve(data);
+            }
         });
     });
     return promise;
