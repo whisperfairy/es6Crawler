@@ -7,7 +7,18 @@
 'use strict'
 import * as PMProgress from "../progress/PMProgress";
 import {writeXlsxCityPM}from '../services/dataPumpServices'
-//PMProgress.StartPMCrawler();
-writeXlsxCityPM().then((d)=>{
-    console.log(d);
-});
+//
+const later = require('later');
+later.date.localTime();
+const sched1 = later.parse.recur().on(30).minute();
+
+const task1 = later.setInterval(function() {
+    PMProgress.StartPMCrawler();
+}, sched1);
+const sched2 = later.parse.recur().on(23).hour().on(55).minute();
+
+const task2 = later.setInterval(function() {
+    writeXlsxCityPM().then(function (d) {
+        console.log(d);
+    });
+}, sched2);
