@@ -2,7 +2,6 @@
 import {CrawlerServices as CrawlerClass} from '../services/CrawlerServices'
 // let dao = require('../dao/PM25Dao');
 import {URLConfig} from '../config/directionalWebsiteURL';
-
 import {StackEvent} from '../Event/StackEvent';
 let iter = URLConfig.CityURL[Symbol.iterator]();
 let i=0;
@@ -14,7 +13,6 @@ StackEvent.on('popstack', function () {
         i++;
         let crawler = new CrawlerClass(cityinfo.value);
         crawler.start();
-
     }
     else {
         console.log('finish');
@@ -34,6 +32,5 @@ const StartPMCrawler=function StartPMCrawler(){
         let crawler = new CrawlerClass(cityinfo.value)
         crawler.start();
     }
-
 };
 export {StartPMCrawler};

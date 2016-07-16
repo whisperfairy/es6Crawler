@@ -29,4 +29,6 @@ var PMStationInfo = exports.PMStationInfo = function PMStationInfo(pmstation) {
     this.o3 = pmstation[8];
     this.o3_8h = pmstation[9];
     this.so2 = pmstation[10];
+    this.PositionX = pmstation[11];
+    this.PositionY = pmstation[12];
 };

@@ -20,5 +20,6 @@ var schema = new Schema({
     o3_8h: { type: String },
     so2: { type: String },
     create_at: { type: Date, default: Date.now }
+
 });
 mongoose.model('dailypm', schema);

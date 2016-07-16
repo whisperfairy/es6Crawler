@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by whisp_000 on 2016/5/29.
  */
 let URLConfig = {
@@ -83,7 +83,7 @@ let URLConfig = {
         },
         {
             CityName: 'zhangjiakou',
-            CityURL: 'http://pm25.in/zhangjiakou',
+            CityURL: 'http://pm25.in/zhangqiu',
             CityTag: 'tbody',
             StationInfo:[
                 {
@@ -115,7 +115,7 @@ let URLConfig = {
         },
         {
             CityName: 'zhangqiu',
-            CityURL: 'http://pm25.in/zhangqiu',
+            CityURL: 'http://pm25.in/zhangye',
             CityTag: 'tbody',
             StationInfo:[
                 {
@@ -166,11 +166,6 @@ let URLConfig = {
                     Station:'九湖',
                     positionX:'24.483445',
                     positionY:'117.648151'
-                },
-                {//
-                    Station:'蓝田镇',
-                    positionX:'34.160746',
-                    positionY:'109.328114'
                 }
             ]
         },
@@ -1118,21 +1113,6 @@ let URLConfig = {
                     Station:'学院路',
                     positionX:'38.51121985',
                     positionY:'106.1493216'
-                },
-                {
-                    Station:'水乡路(直管站)',
-                    positionX:'',
-                    positionY:''
-                },
-                {
-                    Station:'上海东路',
-                    positionX:'',
-                    positionY:''
-                },
-                {
-                    Station:'文昌北街',
-                    positionX:'',
-                    positionY:''
                 }
             ]
         },
@@ -1773,7 +1753,7 @@ let URLConfig = {
         },
         {
             CityName: 'xingtai',
-            CityURL: 'http://pm25.in/xingtai',
+            CityURL: 'http://pm25.in/',
             CityTag: 'tbody',
             StationInfo:[
                 {
@@ -2795,11 +2775,6 @@ let URLConfig = {
                     Station:'宾水西道',
                     positionX:'39.085848',
                     positionY:'117.165225'
-                },
-                {//坐标
-                    Station:'大理道',
-                    positionX:'',
-                    positionY:''
                 }
             ]
         },
@@ -3316,11 +3291,6 @@ let URLConfig = {
                     Station:'市环保站',
                     positionX:'30.00022032',
                     positionY:'120.5613292'
-                },
-                {//坐标
-                    Station:'树下王站',
-                    positionX:'',
-                    positionY:''
                 }
             ]
         },
@@ -5225,7 +5195,7 @@ let URLConfig = {
         },
         {
             CityName: 'baishan',
-            CityURL: 'http://pm25.in/baishan',
+            CityURL: 'http://pm25.in/',
             CityTag: 'tbody',
             StationInfo:[
                 {
@@ -5242,7 +5212,7 @@ let URLConfig = {
         },
         {
             CityName: 'baiyin',
-            CityURL: 'http://pm25.in/baiyin',
+            CityURL: 'http://pm25.in/',
             CityTag: 'tbody',
             StationInfo:[
                 {
@@ -5419,7 +5389,7 @@ let URLConfig = {
         },
         {
             CityName: 'bazhong',
-            CityURL: 'http://pm25.in/bazhong',
+            CityURL: 'http://pm25.in/',
             CityTag: 'tbody',
             StationInfo:[
                 {
@@ -5980,10 +5950,6 @@ let URLConfig = {
                     Station:'常工院',
                     positionX:'31.81251353',
                     positionY:'119.9734223'
-                },{//error
-                    Station:'潞城',
-                    positionX:'',
-                    positionY:''
                 },
                 {
                     Station:'武进监测站',
@@ -6531,12 +6497,6 @@ let URLConfig = {
                     Station:'教育学院',
                     positionX:'40.09802794',
                     positionY:'113.3584991'
-                }
-                ,
-                {//error
-                    Station:'供排水公司',
-                    positionX:'',
-                    positionY:''
                 }
             ]
         },
@@ -7601,7 +7561,7 @@ let URLConfig = {
         },
         {
             CityName: 'hangzhou',
-            CityURL: 'http://pm25.in/hangzhou',
+            CityURL: 'http://pm25.in/',
             CityTag: 'tbody',
             StationInfo:[
                 {
@@ -8500,7 +8460,7 @@ let URLConfig = {
         },
         {
             CityName: 'jiaxing',
-            CityURL: 'http://pm25.in/jiaxing',
+            CityURL: 'http://pm25.in/',
             CityTag: 'tbody',
             StationInfo:[
                 {
@@ -9374,855 +9334,855 @@ let URLConfig = {
             CityURL: 'http://pm25.in/lasa',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'八廓街',
-                    positionX:'29.65621036',
-                    positionY:'91.13914225'
-                },
-                {
-                    Station:'市环保局',
-                    positionX:'29.65182',
-                    positionY:'91.1786'
-                },
-                {
-                    Station:'区监测站',
-                    positionX:'29.67006716',
-                    positionY:'91.11146456'
-                },
-                {
-                    Station:'西藏大学',
-                    positionX:'29.649457',
-                    positionY:'91.15452798'
-                },
-                {
-                    Station:'区辐射站',
-                    positionX:'29.64533',
-                    positionY:'91.0888'
-                },
-                {
-                    Station:'拉萨火车站',
-                    positionX:'29.63002443',
-                    positionY:'91.0744268'
-                }
-            ]
+            {
+                Station:'八廓街',
+                positionX:'29.65621036',
+                positionY:'91.13914225'
+            },
+            {
+                Station:'市环保局',
+                positionX:'29.65182',
+                positionY:'91.1786'
+            },
+            {
+                Station:'区监测站',
+                positionX:'29.67006716',
+                positionY:'91.11146456'
+            },
+            {
+                Station:'西藏大学',
+                positionX:'29.649457',
+                positionY:'91.15452798'
+            },
+            {
+                Station:'区辐射站',
+                positionX:'29.64533',
+                positionY:'91.0888'
+            },
+            {
+                Station:'拉萨火车站',
+                positionX:'29.63002443',
+                positionY:'91.0744268'
+            }
+        ]
         },
         {
             CityName: 'leshan',
             CityURL: 'http://pm25.in/leshan',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'乐山大佛景区',
-                    positionX:'29.55045',
-                    positionY:'103.779107'
-                },
-                {
-                    Station:'牛耳桥',
-                    positionX:'29.583409',
-                    positionY:'103.771594'
-                },
-                {
-                    Station:'市第三水厂',
-                    positionX:'29.604799',
-                    positionY:'103.760081'
-                },
-                {
-                    Station:'市监测站',
-                    positionX:'29.568933',
-                    positionY:'103.765533'
-                }
-            ]
+            {
+                Station:'乐山大佛景区',
+                positionX:'29.55045',
+                positionY:'103.779107'
+            },
+            {
+                Station:'牛耳桥',
+                positionX:'29.583409',
+                positionY:'103.771594'
+            },
+            {
+                Station:'市第三水厂',
+                positionX:'29.604799',
+                positionY:'103.760081'
+            },
+            {
+                Station:'市监测站',
+                positionX:'29.568933',
+                positionY:'103.765533'
+            }
+        ]
         },
         {
             CityName: 'liangshanzhou',
             CityURL: 'http://pm25.in/liangshanzhou',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'青龙寺',
-                    positionX:'27.809153',
-                    positionY:'102.35232'
-                },
-                {
-                    Station:'邛海宾馆',
-                    positionX:'27.844096',
-                    positionY:'102.278607'
-                },
-                {
-                    Station:'西昌市政府',
-                    positionX:'27.900527',
-                    positionY:'102.271062'
-                },
-                {
-                    Station:'凉山州政府',
-                    positionX:'27.879711',
-                    positionY:'102.267049'
-                },
-                {
-                    Station:'长安',
-                    positionX:'27.897418',
-                    positionY:'102.244525'
-                }
-            ]
+            {
+                Station:'青龙寺',
+                positionX:'27.809153',
+                positionY:'102.35232'
+            },
+            {
+                Station:'邛海宾馆',
+                positionX:'27.844096',
+                positionY:'102.278607'
+            },
+            {
+                Station:'西昌市政府',
+                positionX:'27.900527',
+                positionY:'102.271062'
+            },
+            {
+                Station:'凉山州政府',
+                positionX:'27.879711',
+                positionY:'102.267049'
+            },
+            {
+                Station:'长安',
+                positionX:'27.897418',
+                positionY:'102.244525'
+            }
+        ]
         },
         {
             CityName: 'lianyungang',
             CityURL: 'http://pm25.in/lianyungang',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'市环境监测站',
-                    positionX:'34.70138592',
-                    positionY:'119.3549516'
-                },
-                {
-                    Station:'洪门派出所',
-                    positionX:'34.59523379',
-                    positionY:'119.1526316'
-                },
-                {
-                    Station:'墟沟核电专家村',
-                    positionX:'34.75984',
-                    positionY:'119.3681'
-                },
-                {
-                    Station:'开发区恒瑞医药公司',
-                    positionX:'34.70402194',
-                    positionY:'119.3538628'
-                }
-            ]
+            {
+                Station:'市环境监测站',
+                positionX:'34.70138592',
+                positionY:'119.3549516'
+            },
+            {
+                Station:'洪门派出所',
+                positionX:'34.59523379',
+                positionY:'119.1526316'
+            },
+            {
+                Station:'墟沟核电专家村',
+                positionX:'34.75984',
+                positionY:'119.3681'
+            },
+            {
+                Station:'开发区恒瑞医药公司',
+                positionX:'34.70402194',
+                positionY:'119.3538628'
+            }
+        ]
         },
         {
             CityName: 'liaocheng',
             CityURL: 'http://pm25.in/liaocheng',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'区政府',
-                    positionX:'36.441059',
-                    positionY:'115.9950554'
-                },
-                {
-                    Station:'二轻机',
-                    positionX:'36.46298393',
-                    positionY:'116.0067459'
-                },
-                {
-                    Station:'党校',
-                    positionX:'36.49121987',
-                    positionY:'115.9953833'
-                },
-                {
-                    Station:'聊大东校',
-                    positionX:'36.436963',
-                    positionY:'116.018458'
-                }
-            ]
+            {
+                Station:'区政府',
+                positionX:'36.441059',
+                positionY:'115.9950554'
+            },
+            {
+                Station:'二轻机',
+                positionX:'36.46298393',
+                positionY:'116.0067459'
+            },
+            {
+                Station:'党校',
+                positionX:'36.49121987',
+                positionY:'115.9953833'
+            },
+            {
+                Station:'聊大东校',
+                positionX:'36.436963',
+                positionY:'116.018458'
+            }
+        ]
         },
         {
             CityName: 'liaoyang',
             CityURL: 'http://pm25.in/liaoyang',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'宏伟区',
-                    positionX:'41.223443',
-                    positionY:'123.203313'
-                },
-                {
-                    Station:'新华园',
-                    positionX:'41.264914',
-                    positionY:'123.190824'
-                },
-                {
-                    Station:'滨河路',
-                    positionX:'41.297765',
-                    positionY:'123.180391'
-                },
-                {
-                    Station:'铁西工业园',
-                    positionX:'41.306744',
-                    positionY:'123.193226'
-                }
-            ]
+            {
+                Station:'宏伟区',
+                positionX:'41.223443',
+                positionY:'123.203313'
+            },
+            {
+                Station:'新华园',
+                positionX:'41.264914',
+                positionY:'123.190824'
+            },
+            {
+                Station:'滨河路',
+                positionX:'41.297765',
+                positionY:'123.180391'
+            },
+            {
+                Station:'铁西工业园',
+                positionX:'41.306744',
+                positionY:'123.193226'
+            }
+        ]
         },
         {
             CityName: 'liaoyuan',
             CityURL: 'http://pm25.in/liaoyuan',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'环保局',
-                    positionX:'42.893376',
-                    positionY:'125.148438'
-                },
-                {
-                    Station:'污水处理厂',
-                    positionX:'42.89769',
-                    positionY:'125.164213'
-                }
-            ]
+            {
+                Station:'环保局',
+                positionX:'42.893376',
+                positionY:'125.148438'
+            },
+            {
+                Station:'污水处理厂',
+                positionX:'42.89769',
+                positionY:'125.164213'
+            }
+        ]
         },
         {
             CityName: 'lijiang',
             CityURL: 'http://pm25.in/lijiang',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'西南郊',
-                    positionX:'',
-                    positionY:''
-                },
-                {
-                    Station:'丽江古城',
-                    positionX:'26.883538',
-                    positionY:'100.232399'
-                },
-                {
-                    Station:'市中心',
-                    positionX:'',
-                    positionY:''
-                }
-            ]
+            {
+                Station:'西南郊',
+                positionX:'',
+                positionY:''
+            },
+            {
+                Station:'丽江古城',
+                positionX:'26.883538',
+                positionY:'100.232399'
+            },
+            {
+                Station:'市中心',
+                positionX:'',
+                positionY:''
+            }
+        ]
         },
         {
             CityName: 'linan',
             CityURL: 'http://pm25.in/linan',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'市政府',
-                    positionX:'30.239752',
-                    positionY:'119.731318'
-                },
-                {
-                    Station:'四中',
-                    positionX:'30.233957',
-                    positionY:'119.705529'
-                }
-            ]
+            {
+                Station:'市政府',
+                positionX:'30.239752',
+                positionY:'119.731318'
+            },
+            {
+                Station:'四中',
+                positionX:'30.233957',
+                positionY:'119.705529'
+            }
+        ]
         },
         {
             CityName: 'lincang',
             CityURL: 'http://pm25.in/lincang',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'市环保局',
-                    positionX:'23.902184',
-                    positionY:'100.086263'
-                },
-                {
-                    Station:'市气象局',
-                    positionX:'23.886127',
-                    positionY:'100.096748'
-                }
-            ]
+            {
+                Station:'市环保局',
+                positionX:'23.902184',
+                positionY:'100.086263'
+            },
+            {
+                Station:'市气象局',
+                positionX:'23.886127',
+                positionY:'100.096748'
+            }
+        ]
         },
         {
             CityName: 'linfen',
             CityURL: 'http://pm25.in/linfen',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'市监测站',
-                    positionX:'36.10381849',
-                    positionY:'111.5262999'
-                },
-                {
-                    Station:'临钢医院',
-                    positionX:'36.08403487',
-                    positionY:'111.5670264'
-                },
-                {
-                    Station:'技工学校',
-                    positionX:'36.08428572',
-                    positionY:'111.5430308'
-                },
-                {
-                    Station:'工商学校',
-                    positionX:'36.08209',
-                    positionY:'111.5243'
-                },
-                {
-                    Station:'市委',
-                    positionX:'36.09070677',
-                    positionY:'111.5146111'
-                },
-                {
-                    Station:'南机场',
-                    positionX:'36.08726589',
-                    positionY:'111.5286768'
-                }
-            ]
+            {
+                Station:'市监测站',
+                positionX:'36.10381849',
+                positionY:'111.5262999'
+            },
+            {
+                Station:'临钢医院',
+                positionX:'36.08403487',
+                positionY:'111.5670264'
+            },
+            {
+                Station:'技工学校',
+                positionX:'36.08428572',
+                positionY:'111.5430308'
+            },
+            {
+                Station:'工商学校',
+                positionX:'36.08209',
+                positionY:'111.5243'
+            },
+            {
+                Station:'市委',
+                positionX:'36.09070677',
+                positionY:'111.5146111'
+            },
+            {
+                Station:'南机场',
+                positionX:'36.08726589',
+                positionY:'111.5286768'
+            }
+        ]
         },
         {
             CityName: 'linxiazhou',
-            CityURL: 'http://pm25.in/linxiazhou',
+            CityURL: 'http://pm25.in/',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'环保局',
-                    positionX:'35.611263',
-                    positionY:'103.250844'
-                },
-                {
-                    Station:'州委党校',
-                    positionX:'35.608921',
-                    positionY:'103.223164'
-                }
-            ]
+            {
+                Station:'环保局',
+                positionX:'35.611263',
+                positionY:'103.250844'
+            },
+            {
+                Station:'州委党校',
+                positionX:'35.608921',
+                positionY:'103.223164'
+            }
+        ]
         },
         {
             CityName: 'linyi',
             CityURL: 'http://pm25.in/linyi',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'沂河小区',
-                    positionX:'35.79093258',
-                    positionY:'118.6290453'
-                },
-                {
-                    Station:'鲁南制药厂',
-                    positionX:'35.06607455',
-                    positionY:'118.3065832'
-                },
-                {
-                    Station:'新光毛纺厂',
-                    positionX:'34.97705',
-                    positionY:'118.28357'
-                },
-                {
-                    Station:'河东保险公司',
-                    positionX:'35.2470929',
-                    positionY:'118.5917782'
-                }
-            ]
+            {
+                Station:'沂河小区',
+                positionX:'35.79093258',
+                positionY:'118.6290453'
+            },
+            {
+                Station:'鲁南制药厂',
+                positionX:'35.06607455',
+                positionY:'118.3065832'
+            },
+            {
+                Station:'新光毛纺厂',
+                positionX:'34.97705',
+                positionY:'118.28357'
+            },
+            {
+                Station:'河东保险公司',
+                positionX:'35.2470929',
+                positionY:'118.5917782'
+            }
+        ]
         },
         {
             CityName: 'linzhidiqu',
             CityURL: 'http://pm25.in/linzhidiqu',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'林芝监测站',
-                    positionX:'29.640474',
-                    positionY:'94.37653'
-                },
-                {
-                    Station:'林芝人民医院',
-                    positionX:'29.666982',
-                    positionY:'94.369164'
-                }
-            ]
+            {
+                Station:'林芝监测站',
+                positionX:'29.640474',
+                positionY:'94.37653'
+            },
+            {
+                Station:'林芝人民医院',
+                positionX:'29.666982',
+                positionY:'94.369164'
+            }
+        ]
         },
         {
             CityName: 'lishui',
             CityURL: 'http://pm25.in/lishui',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'监测站大楼',
-                    positionX:'28.453577',
-                    positionY:'119.925054'
-                },
-                {
-                    Station:'莲都小学',
-                    positionX:'28.459947',
-                    positionY:'119.941254'
-                },
-                {
-                    Station:'余庄前',
-                    positionX:'28.418351',
-                    positionY:'119.883457'
-                }
-            ]
+            {
+                Station:'监测站大楼',
+                positionX:'28.453577',
+                positionY:'119.925054'
+            },
+            {
+                Station:'莲都小学',
+                positionX:'28.459947',
+                positionY:'119.941254'
+            },
+            {
+                Station:'余庄前',
+                positionX:'28.418351',
+                positionY:'119.883457'
+            }
+        ]
         },
         {
             CityName: 'liupanshui',
             CityURL: 'http://pm25.in/liupanshui',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'窑上',
-                    positionX:'26.622786',
-                    positionY:'104.99847'
-                },
-                {
-                    Station:'黄土坡',
-                    positionX:'26.604568',
-                    positionY:'104.837032'
-                },
-                {
-                    Station:'水钢',
-                    positionX:'26.580245',
-                    positionY:'104.887647'
-                },
-                {
-                    Station:'民中',
-                    positionX:'26.592591',
-                    positionY:'104.857281'
-                },
-                {
-                    Station:'双水',
-                    positionX:'26.555947',
-                    positionY:'104.950777'
-                }
-            ]
+            {
+                Station:'窑上',
+                positionX:'26.622786',
+                positionY:'104.99847'
+            },
+            {
+                Station:'黄土坡',
+                positionX:'26.604568',
+                positionY:'104.837032'
+            },
+            {
+                Station:'水钢',
+                positionX:'26.580245',
+                positionY:'104.887647'
+            },
+            {
+                Station:'民中',
+                positionX:'26.592591',
+                positionY:'104.857281'
+            },
+            {
+                Station:'双水',
+                positionX:'26.555947',
+                positionY:'104.950777'
+            }
+        ]
         },
         {
             CityName: 'liuzhou',
             CityURL: 'http://pm25.in/liuzhou',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'柳东小学',
-                    positionX:'24.3223663',
-                    positionY:'109.4383091'
-                },
-                {
-                    Station:'环保监测站',
-                    positionX:'24.33391617',
-                    positionY:'109.4217803'
-                },
-                {
-                    Station:'河西水厂',
-                    positionX:'24.3379',
-                    positionY:'109.3897'
-                },
-                {
-                    Station:'市四中',
-                    positionX:'24.30153827',
-                    positionY:'109.4319069'
-                },
-                {
-                    Station:'市九中',
-                    positionX:'24.36800304',
-                    positionY:'109.407047'
-                },
-                {
-                    Station:'古亭山',
-                    positionX:'24.32929833',
-                    positionY:'109.5234676'
-                }
-            ]
+            {
+                Station:'柳东小学',
+                positionX:'24.3223663',
+                positionY:'109.4383091'
+            },
+            {
+                Station:'环保监测站',
+                positionX:'24.33391617',
+                positionY:'109.4217803'
+            },
+            {
+                Station:'河西水厂',
+                positionX:'24.3379',
+                positionY:'109.3897'
+            },
+            {
+                Station:'市四中',
+                positionX:'24.30153827',
+                positionY:'109.4319069'
+            },
+            {
+                Station:'市九中',
+                positionX:'24.36800304',
+                positionY:'109.407047'
+            },
+            {
+                Station:'古亭山',
+                positionX:'24.32929833',
+                positionY:'109.5234676'
+            }
+        ]
         },
         {
             CityName: 'liyang',
             CityURL: 'http://pm25.in/liyang',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'溧阳市东门子站',
-                    positionX:'31.43582',
-                    positionY:'119.505991'
-                },
-                {
-                    Station:'燕山子站',
-                    positionX:'31.404054',
-                    positionY:'119.47853'
-                }
-            ]
+            {
+                Station:'溧阳市东门子站',
+                positionX:'31.43582',
+                positionY:'119.505991'
+            },
+            {
+                Station:'燕山子站',
+                positionX:'31.404054',
+                positionY:'119.47853'
+            }
+        ]
         },
         {
             CityName: 'longnan',
             CityURL: 'http://pm25.in/longnan',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'汉王镇固水子',
-                    positionX:'33.349206',
-                    positionY:'105.017454'
-                },
-                {
-                    Station:'市林业局',
-                    positionX:'33.389905',
-                    positionY:'104.940274'
-                },
-                {
-                    Station:'滨江中学',
-                    positionX:'33.386857',
-                    positionY:'滨江中学'
-                }
-            ]
+            {
+                Station:'汉王镇固水子',
+                positionX:'33.349206',
+                positionY:'105.017454'
+            },
+            {
+                Station:'市林业局',
+                positionX:'33.389905',
+                positionY:'104.940274'
+            },
+            {
+                Station:'滨江中学',
+                positionX:'33.386857',
+                positionY:'滨江中学'
+            }
+        ]
         },
         {
             CityName: 'longyan',
             CityURL: 'http://pm25.in/longyan',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'龙岩师专',
-                    positionX:'25.090818',
-                    positionY:'117.041935'
-                },
-                {
-                    Station:'龙岩市监测站',
-                    positionX:'25.106604',
-                    positionY:'117.032636'
-                },
-                {
-                    Station:'闽西职业技术学院',
-                    positionX:'25.069163',
-                    positionY:'117.038894'
-                },
-                {
-                    Station:'龙岩学院',
-                    positionX:'25.036348',
-                    positionY:'117.029734'
-                }
-            ]
+            {
+                Station:'龙岩师专',
+                positionX:'25.090818',
+                positionY:'117.041935'
+            },
+            {
+                Station:'龙岩市监测站',
+                positionX:'25.106604',
+                positionY:'117.032636'
+            },
+            {
+                Station:'闽西职业技术学院',
+                positionX:'25.069163',
+                positionY:'117.038894'
+            },
+            {
+                Station:'龙岩学院',
+                positionX:'25.036348',
+                positionY:'117.029734'
+            }
+        ]
         },
         {
             CityName: 'loudi',
             CityURL: 'http://pm25.in/loudi',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'电视发射台',
-                    positionX:'27.748637',
-                    positionY:'112.00933'
-                },
-                {
-                    Station:'市监测站',
-                    positionX:'27.728693',
-                    positionY:'112.023377'
-                },
-                {
-                    Station:'市委党校',
-                    positionX:'27.734855',
-                    positionY:'112.031241'
-                },
-                {
-                    Station:'涟钢',
-                    positionX:'27.753113',
-                    positionY:'111.984125'
-                },
-                {
-                    Station:'市政府',
-                    positionX:'27.703196',
-                    positionY:'112.001082'
-                }
-            ]
+            {
+                Station:'电视发射台',
+                positionX:'27.748637',
+                positionY:'112.00933'
+            },
+            {
+                Station:'市监测站',
+                positionX:'27.728693',
+                positionY:'112.023377'
+            },
+            {
+                Station:'市委党校',
+                positionX:'27.734855',
+                positionY:'112.031241'
+            },
+            {
+                Station:'涟钢',
+                positionX:'27.753113',
+                positionY:'111.984125'
+            },
+            {
+                Station:'市政府',
+                positionX:'27.703196',
+                positionY:'112.001082'
+            }
+        ]
         },
         {
             CityName: 'luan',
             CityURL: 'http://pm25.in/luan',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'监测大楼',
-                    positionX:'31.731636',
-                    positionY:'116.489806'
-                },
-                {
-                    Station:'皖西学院',
-                    positionX:'31.767211',
-                    positionY:'116.490164'
-                },
-                {
-                    Station:'朝阳厂',
-                    positionX:'31.783127',
-                    positionY:'朝阳厂'
-                },
-                {
-                    Station:'开发区',
-                    positionX:'31.726398',
-                    positionY:'116.487677'
-                }
-            ]
+            {
+                Station:'监测大楼',
+                positionX:'31.731636',
+                positionY:'116.489806'
+            },
+            {
+                Station:'皖西学院',
+                positionX:'31.767211',
+                positionY:'116.490164'
+            },
+            {
+                Station:'朝阳厂',
+                positionX:'31.783127',
+                positionY:'朝阳厂'
+            },
+            {
+                Station:'开发区',
+                positionX:'31.726398',
+                positionY:'116.487677'
+            }
+        ]
         },
         {
             CityName: 'luohe',
             CityURL: 'http://pm25.in/luohe',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'三五一五工厂',
-                    positionX:'33.574334',
-                    positionY:'114.063078'
-                },
-                {
-                    Station:'漯河大学',
-                    positionX:'33.57391',
-                    positionY:'114.013847'
-                },
-                {
-                    Station:'水利局',
-                    positionX:'33.587646',
-                    positionY:'114.025761'
-                },
-                {
-                    Station:'广电局',
-                    positionX:'33.604517',
-                    positionY:'114.023927'
-                }
-            ]
+            {
+                Station:'三五一五工厂',
+                positionX:'33.574334',
+                positionY:'114.063078'
+            },
+            {
+                Station:'漯河大学',
+                positionX:'33.57391',
+                positionY:'114.013847'
+            },
+            {
+                Station:'水利局',
+                positionX:'33.587646',
+                positionY:'114.025761'
+            },
+            {
+                Station:'广电局',
+                positionX:'33.604517',
+                positionY:'114.023927'
+            }
+        ]
         },
         {
             CityName: 'luoyang',
             CityURL: 'http://pm25.in/luoyang',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'中信二小',
-                    positionX:'34.61892173',
-                    positionY:'112.3653963'
-                },
-                {
-                    Station:'市委党校',
-                    positionX:'34.65660812',
-                    positionY:'112.4067121'
-                },
-                {
-                    Station:'市监测站',
-                    positionX:'34.67848095',
-                    positionY:'112.4722803'
-                },
-                {
-                    Station:'豫西宾馆',
-                    positionX:'34.712882',
-                    positionY:'112.5334953'
-                },
-                {
-                    Station:'河南林校',
-                    positionX:'34.69355526',
-                    positionY:'112.5055014'
-                },
-                {
-                    Station:'开发区管委会',
-                    positionX:'34.62342591',
-                    positionY:'112.4876296'
-                },
-                {
-                    Station:'市委新办公区',
-                    positionX:'34.62025',
-                    positionY:'112.4565'
-                }
-            ]
+            {
+                Station:'中信二小',
+                positionX:'34.61892173',
+                positionY:'112.3653963'
+            },
+            {
+                Station:'市委党校',
+                positionX:'34.65660812',
+                positionY:'112.4067121'
+            },
+            {
+                Station:'市监测站',
+                positionX:'34.67848095',
+                positionY:'112.4722803'
+            },
+            {
+                Station:'豫西宾馆',
+                positionX:'34.712882',
+                positionY:'112.5334953'
+            },
+            {
+                Station:'河南林校',
+                positionX:'34.69355526',
+                positionY:'112.5055014'
+            },
+            {
+                Station:'开发区管委会',
+                positionX:'34.62342591',
+                positionY:'112.4876296'
+            },
+            {
+                Station:'市委新办公区',
+                positionX:'34.62025',
+                positionY:'112.4565'
+            }
+        ]
         },
         {
             CityName: 'luzhou',
             CityURL: 'http://pm25.in/luzhou',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'九狮山',
-                    positionX:'28.96387182',
-                    positionY:'105.4432633'
-                },
-                {
-                    Station:'小市上码头',
-                    positionX:'28.90543253',
-                    positionY:'105.4536379'
-                },
-                {
-                    Station:'兰田宪桥',
-                    positionX:'105.4394716',
-                    positionY:'105.4394716'
-                },
-                {
-                    Station:'市环监站',
-                    positionX:'29.15709647',
-                    positionY:'105.3851034'
-                }
-            ]
+            {
+                Station:'九狮山',
+                positionX:'28.96387182',
+                positionY:'105.4432633'
+            },
+            {
+                Station:'小市上码头',
+                positionX:'28.90543253',
+                positionY:'105.4536379'
+            },
+            {
+                Station:'兰田宪桥',
+                positionX:'105.4394716',
+                positionY:'105.4394716'
+            },
+            {
+                Station:'市环监站',
+                positionX:'29.15709647',
+                positionY:'105.3851034'
+            }
+        ]
         },
         {
             CityName: 'lvliang',
             CityURL: 'http://pm25.in/lvliang',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'环保局',
-                    positionX:'37.528502',
-                    positionY:'111.153073'
-                },
-                {
-                    Station:'豆制品厂',
-                    positionX:'37.52189',
-                    positionY:'111.143578'
-                },
-                {
-                    Station:'自来水公司',
-                    positionX:'37.539846',
-                    positionY:'111.142081'
-                },
-                {
-                    Station:'马茂庄小学',
-                    positionX:'37.516952',
-                    positionY:'111.134327'
-                }
-            ]
+            {
+                Station:'环保局',
+                positionX:'37.528502',
+                positionY:'111.153073'
+            },
+            {
+                Station:'豆制品厂',
+                positionX:'37.52189',
+                positionY:'111.143578'
+            },
+            {
+                Station:'自来水公司',
+                positionX:'37.539846',
+                positionY:'111.142081'
+            },
+            {
+                Station:'马茂庄小学',
+                positionX:'37.516952',
+                positionY:'111.134327'
+            }
+        ]
         },
         {
             CityName: 'maanshan',
             CityURL: 'http://pm25.in/maanshan',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'湖东路四小',
-                    positionX:'31.72547426',
-                    positionY:'118.499315'
-                },
-                {
-                    Station:'天平服装',
-                    positionX:'31.63952',
-                    positionY:'118.4891'
-                },
-                {
-                    Station:'慈湖二小',
-                    positionX:'31.75426779',
-                    positionY:'31.69436495'
-                },
-                {
-                    Station:'马钢动力厂',
-                    positionX:'31.63422',
-                    positionY:'118.5048'
-                },
-                {
-                    Station:'市教育基地',
-                    positionX:'31.69436495',
-                    positionY:'118.496085'
-                }
-            ]
+            {
+                Station:'湖东路四小',
+                positionX:'31.72547426',
+                positionY:'118.499315'
+            },
+            {
+                Station:'天平服装',
+                positionX:'31.63952',
+                positionY:'118.4891'
+            },
+            {
+                Station:'慈湖二小',
+                positionX:'31.75426779',
+                positionY:'31.69436495'
+            },
+            {
+                Station:'马钢动力厂',
+                positionX:'31.63422',
+                positionY:'118.5048'
+            },
+            {
+                Station:'市教育基地',
+                positionX:'31.69436495',
+                positionY:'118.496085'
+            }
+        ]
         },
         {
             CityName: 'maoming',
             CityURL: 'http://pm25.in/maoming',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'市环保局茂港分局',
-                    positionX:'21.47210262',
-                    positionY:'111.0402358'
-                },
-                {
-                    Station:'茂石化七小',
-                    positionX:'21.6730555',
-                    positionY:'110.9276287'
-                },
-                {
-                    Station:'健康路',
-                    positionX:'21.6730555',
-                    positionY:'110.9276287'
-                },
-                {
-                    Station:'高岭',
-                    positionX:'21.73591269',
-                    positionY:'110.7881425'
-                }
-            ]
+            {
+                Station:'市环保局茂港分局',
+                positionX:'21.47210262',
+                positionY:'111.0402358'
+            },
+            {
+                Station:'茂石化七小',
+                positionX:'21.6730555',
+                positionY:'110.9276287'
+            },
+            {
+                Station:'健康路',
+                positionX:'21.6730555',
+                positionY:'110.9276287'
+            },
+            {
+                Station:'高岭',
+                positionX:'21.73591269',
+                positionY:'110.7881425'
+            }
+        ]
         },
         {
             CityName: 'meishan',
             CityURL: 'http://pm25.in/meishan',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'蟆颐观',
-                    positionX:'30.058308',
-                    positionY:'103.882481'
-                },
-                {
-                    Station:'气象局',
-                    positionX:'30.090358',
-                    positionY:'103.850462'
-                },
-                {
-                    Station:'旭光小区',
-                    positionX:'30.074049',
-                    positionY:'103.861531'
-                },
-                {
-                    Station:'市监测站',
-                    positionX:'30.065217',
-                    positionY:'103.843051'
-                }
-            ]
+            {
+                Station:'蟆颐观',
+                positionX:'30.058308',
+                positionY:'103.882481'
+            },
+            {
+                Station:'气象局',
+                positionX:'30.090358',
+                positionY:'103.850462'
+            },
+            {
+                Station:'旭光小区',
+                positionX:'30.074049',
+                positionY:'103.861531'
+            },
+            {
+                Station:'市监测站',
+                positionX:'30.065217',
+                positionY:'103.843051'
+            }
+        ]
         },
         {
             CityName: 'meizhou',
             CityURL: 'http://pm25.in/meizhou',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'嘉应大学',
-                    positionX:'24.33214561',
-                    positionY:'116.1348272'
-                },
-                {
-                    Station:'梅县新城',
-                    positionX:'24.29271502',
-                    positionY:'116.1075349'
-                },
-                {
-                    Station:'环境监控中心',
-                    positionX:'24.27523959',
-                    positionY:'116.091431'
-                }
-            ]
+            {
+                Station:'嘉应大学',
+                positionX:'24.33214561',
+                positionY:'116.1348272'
+            },
+            {
+                Station:'梅县新城',
+                positionX:'24.29271502',
+                positionY:'116.1075349'
+            },
+            {
+                Station:'环境监控中心',
+                positionX:'24.27523959',
+                positionY:'116.091431'
+            }
+        ]
         },
         {
             CityName: 'mianyang',
             CityURL: 'http://pm25.in/mianyang',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'富乐山',
-                    positionX:'31.4762016',
-                    positionY:'104.7792548'
-                },
-                {
-                    Station:'市人大',
-                    positionX:'31.4875057',
-                    positionY:'104.7209844'
-                },
-                {
-                    Station:'高新区自来水公司',
-                    positionX:'31.4692162',
-                    positionY:'104.6812478'
-                },
-                {
-                    Station:'三水厂',
-                    positionX:'31.50473',
-                    positionY:'104.7343'
-                }
-            ]
+            {
+                Station:'富乐山',
+                positionX:'31.4762016',
+                positionY:'104.7792548'
+            },
+            {
+                Station:'市人大',
+                positionX:'31.4875057',
+                positionY:'104.7209844'
+            },
+            {
+                Station:'高新区自来水公司',
+                positionX:'31.4692162',
+                positionY:'104.6812478'
+            },
+            {
+                Station:'三水厂',
+                positionX:'31.50473',
+                positionY:'104.7343'
+            }
+        ]
         },
         {
             CityName: 'mudanjiang',
             CityURL: 'http://pm25.in/mudanjiang',
             CityTag: 'tbody',
             StationInfo:[
-                {
-                    Station:'环保大楼',
-                    positionX:'44.58215',
-                    positionY:'129.60166'
-                },
-                {
-                    Station:'文化广场',
-                    positionX:'44.58753838',
-                    positionY:'129.6261705'
-                },
-                {
-                    Station:'第一医院',
-                    positionX:'44.60410192',
-                    positionY:'129.604542'
-                },
-                {
-                    Station:'机车工厂',
-                    positionX:'44.61397551',
-                    positionY:'129.6577306'
-                },
-                {
-                    Station:'第一中学',
-                    positionX:'44.55555901',
-                    positionY:'129.6532409'
-                }
-            ]
+            {
+                Station:'环保大楼',
+                positionX:'44.58215',
+                positionY:'129.60166'
+            },
+            {
+                Station:'文化广场',
+                positionX:'44.58753838',
+                positionY:'129.6261705'
+            },
+            {
+                Station:'第一医院',
+                positionX:'44.60410192',
+                positionY:'129.604542'
+            },
+            {
+                Station:'机车工厂',
+                positionX:'44.61397551',
+                positionY:'129.6577306'
+            },
+            {
+                Station:'第一中学',
+                positionX:'44.55555901',
+                positionY:'129.6532409'
+            }
+        ]
         }
-    ]
+]
 };
 export {URLConfig as URLConfig}

@@ -42,7 +42,7 @@ var CrawlerServices = function () {
     function CrawlerServices(city) {
         (0, _classCallCheck3.default)(this, CrawlerServices);
 
-        this.Tag = city.CityTag || "", this.CityName = city.CityName || "", this.URL = city.CityURL || "", this.html = "", this.CrawlerInfo = [];
+        this.Tag = city.CityTag || "", this.city = city, this.CityName = city.CityName || "", this.URL = city.CityURL || "", this.html = "", this.CrawlerInfo = [];
     }
 
     (0, _createClass3.default)(CrawlerServices, [{
@@ -93,6 +93,7 @@ var CrawlerServices = function () {
         value: function catchdata() {
             var _this2 = this;
 
+            var _ = this;
             var promise = new Promise(function (resolve, reject) {
                 // ... some code
                 console.log("catch start");
@@ -111,6 +112,8 @@ var CrawlerServices = function () {
                     $(elem).children().each(function (j, el) {
                         arr.push($(el).text());
                     });
+                    arr.push(_.city.StationInfo[i].positionX);
+                    arr.push(_.city.StationInfo[i].positionY);
                     results.push(arr);
                 });
                 console.log(_this2.CityName + "catch success");

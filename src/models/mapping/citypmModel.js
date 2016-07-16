@@ -19,6 +19,8 @@ var schema = new Schema({
     o3:{type:String},
     o3_8h:{type:String},
     so2:{type:String},
+    PositionX:{type:String},
+    PositionY:{type:String},
     create_at:{ type:Date, default:Date.now }
 });
 mongoose.model('citypm', schema);

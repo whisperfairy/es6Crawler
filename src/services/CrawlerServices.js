@@ -11,7 +11,8 @@ import {PMStationInfo} from '../entities/PMStationInfo';
 console.log(this);
 class CrawlerServices {
     constructor(city) {
-        this.Tag = city.CityTag || "",
+            this.Tag = city.CityTag || "",
+            this.city=city,
             this.CityName = city.CityName || "",
             this.URL = city.CityURL || "",
             this.html = "",
@@ -59,6 +60,7 @@ class CrawlerServices {
     }
 
     catchdata() {
+        let _ =this;
         var promise = new Promise((resolve, reject)=> {
             // ... some code
             console.log("catch start");
@@ -78,6 +80,8 @@ class CrawlerServices {
                 $(elem).children().each(function (j, el) {
                     arr.push($(el).text());
                 });
+                arr.push(_.city.StationInfo[i].positionX);
+                arr.push(_.city.StationInfo[i].positionY);
                 results.push(arr);
             });
             console.log(this.CityName + "catch success");

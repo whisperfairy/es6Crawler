@@ -86,7 +86,6 @@ export function writeXlsxCityPM()
             .createWorkbook('../resources/tmp/tempcitypm'+now.getFullYear()+(now.getMonth()+1)+now.getDate()+'.xlsx')
             .createWorksheet('AQI')
             .writeHeaders(['stationname', 'city','aqi','ranktype','primarypollution','pm25','pm10','co','no2','o3','o3_8h','so2','time'])
-
             .process(function(AQI) {
                 return pump.writeRow([ AQI.stationname, AQI.city,AQI.AQI,AQI.ranktype,AQI.primarypollution,AQI.pm25,AQI.pm10,AQI.co,AQI.no2,AQI.o3,AQI.o3_8h,AQI.so2,AQI.create_at.toString()]);
             })
