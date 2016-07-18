@@ -20,7 +20,7 @@ var sched1 = later.parse.recur().on(40).minute();
 var task1 = later.setInterval(function() {
     PMProgress.StartPMCrawler();
 }, sched1);
-var sched2 = later.parse.recur().on(23).hour().on(55).minute();
+var sched2 = later.parse.recur().on(23).hour().on(59).minute();
 var task2 = later.setInterval(function() {
     (0, _dataPumpServices.writeXlsxCityPM)().then(function (d) {
         console.log(d);
