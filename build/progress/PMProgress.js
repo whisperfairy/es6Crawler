@@ -25,6 +25,9 @@ _StackEvent.StackEvent.on('popstack', function () {
         crawler.start();
     } else {
         console.log('finish');
+        i = 0;
+        iter = null;
+        iter = _directionalWebsiteURL.URLConfig.CityURL[Symbol.iterator]();
     }
 });
 _StackEvent.StackEvent.on('retry', function () {

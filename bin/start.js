@@ -26,3 +26,4 @@ var task2 = later.setInterval(function() {
         console.log(d);
     });
 }, sched2);
+//todo 每个流程应该是一个对象，每次定时需要新建一个流程对象

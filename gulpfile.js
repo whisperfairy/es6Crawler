@@ -14,10 +14,11 @@ gulp.task('default', ['es6'],function() {
     "use strict";
     glob("src/**/*.js", {}, function (er, files) {
         files.map((item) => {
+            console.log(item);
             var result = helper.filepath(item);
-            console.log(result.folder);
+            console.log(result);
             return gulp.src(item.toString())
-                .pipe(babel()).pipe(gulp.dest('./build/' + result.folder));
+                .pipe(babel()).pipe(gulp.dest('./build/' + result.folderPath));
         })
     });
 });
@@ -31,21 +32,16 @@ gulp.task('es6',[],function()
         files.map((item) => {
             var watcher = gulp.watch(item.toString(),
                 function(event) {
-                var result=helper.filepath(item);
-                console.log(result.folder);
-                return gulp.src(item.toString())
-                    .pipe(babel({
-                        presets: ['es2016', 'stage-3']
-                    })).pipe(gulp.dest('./build/'+result.folder));
-            });
+                    var result = helper.filepath(item);
+                    console.log(result);
+                    return gulp.src(item.toString())
+                        .pipe(babel()).pipe(gulp.dest('./build/' + result.folderPath));
+                });
 
         });
 
     });
 });
-
-
-
 
 gulp.task('install', ['git-check'], function() {
     return bower.commands.install()

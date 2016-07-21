@@ -16,12 +16,17 @@ StackEvent.on('popstack', function () {
     }
     else {
         console.log('finish');
+        i=0;
+        iter=null;
+        iter= URLConfig.CityURL[Symbol.iterator]();
+
     }
 });
 StackEvent.on('retry', function () {
     console.log("i="+i);
         let crawler = new CrawlerClass(cityinfo.value);
         crawler.start();
+    
 });
 const StartPMCrawler=function StartPMCrawler(){
     for (let i = 0; i < 1; i++) {
