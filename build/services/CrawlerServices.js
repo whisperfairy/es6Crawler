@@ -213,9 +213,8 @@ var CrawlerServices = function () {
                                 case 10:
                                     _context2.prev = 10;
                                     _context2.t0 = _context2['catch'](0);
-                                    throw new Error('出错了');
 
-                                case 13:
+                                case 12:
                                 case 'end':
                                     return _context2.stop();
                             }

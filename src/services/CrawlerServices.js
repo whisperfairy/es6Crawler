@@ -130,8 +130,6 @@ class CrawlerServices {
              }
              catch (e)
              {
-
-                 throw new Error('出错了');
              }
 
          };
