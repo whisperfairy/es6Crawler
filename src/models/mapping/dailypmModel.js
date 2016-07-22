@@ -17,7 +17,7 @@ var schema = new Schema({
     o3:{type:String},
     o3_8h:{type:String},
     so2:{type:String},
-    create_at:{ type:String, default:Date.now.toLocaleString() }
+    create_at:{ type:String, default:Date.now }
 
 });
 mongoose.model('dailypm', schema);

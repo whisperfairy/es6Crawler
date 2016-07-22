@@ -77,7 +77,8 @@ export function writeXlsxCityPM()
     let promise = new Promise((resolve,reject)=>{
         let date= new Date();
         let pump = new Pump();
-        let now = new Date(date.getFullYear(),date.getMonth(),date.getDate());
+        let now = new Date();
+        now.setHours(yesterday.getHours()-24);
         pump
             .mixin(MongodbMixin('mongodb://bjfu:hu0923010227@120.25.223.69/bjfuweather'))
             .useCollection('citypms')
@@ -87,7 +88,7 @@ export function writeXlsxCityPM()
             .createWorksheet('AQI')
             .writeHeaders(['stationname', 'city','aqi','ranktype','primarypollution','pm25','pm10','co','no2','o3','o3_8h','so2','time'])
             .process(function(AQI) {
-                return pump.writeRow([ AQI.stationname, AQI.city,AQI.AQI,AQI.ranktype,AQI.primarypollution,AQI.pm25,AQI.pm10,AQI.co,AQI.no2,AQI.o3,AQI.o3_8h,AQI.so2,AQI.create_at.toString()]);
+                return pump.writeRow([ AQI.stationname, AQI.city,AQI.AQI,AQI.ranktype,AQI.primarypollution,AQI.pm25,AQI.pm10,AQI.co,AQI.no2,AQI.o3,AQI.o3_8h,AQI.so2,AQI.create_at.toLocaleString()]);
             })
             .logErrorsToConsole()
             .run()
