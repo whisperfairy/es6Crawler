@@ -23,6 +23,6 @@ var schema = new Schema({
     so2: { type: String },
     PositionX: { type: String },
     PositionY: { type: String },
-    create_at: { type: Date, default: Date.now }
+    create_at: { type: Date, default: Date.now.toLocaleString() }
 });
 mongoose.model('citypm', schema);
