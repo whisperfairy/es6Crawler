@@ -6,6 +6,6 @@
  */
 module.exports = {
   cookieSecret: 'bjfuweather',
-  connectionstring: 'mongodb://bjfu:cnmbeva11@120.25.223.69/bjfuweather'
+  connectionstring: 'connect string'
   // connectionstring:'mongodb://localhost/njblog'
 };
